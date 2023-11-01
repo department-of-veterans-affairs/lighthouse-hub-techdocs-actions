@@ -1,0 +1,13 @@
+name: Build & Publish Documentation
+on:
+  workflow_dispatch:
+
+jobs:
+  publish-documentation:
+    runs-on:
+      - bandicoot-self-hosted-dev
+      - techdocs
+    uses: department-of-veterans-affairs/lighthouse-developer-portal/.github/workflows/build-publish-docs.yaml@API-26886-update-techdocs
+    with:
+      enable-production: false
+      
